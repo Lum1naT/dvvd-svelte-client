@@ -5,7 +5,7 @@
     let continents;
   
   onMount(async () => {
-      await fetch(`http://localhost:8000/sources/`)
+      await fetch(`https://async-django-api-docker.onrender.com/sources/`)
         .then(r => r.json())
         .then(data => {
           continents = data;
