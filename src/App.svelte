@@ -1,14 +1,15 @@
 <script>
-	export let name;
-</script>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<br>
-	<p>And check out <a href="https://render.com">Render</a>'s Svelte <a href="https://render.com/docs/deploy-svelte">quickstart guide</a> to see how this site was deployed.</p>
-	<p class="large">🧑‍💻</p>
-</main>
+	import { onMount } from "svelte";
+	import Continent from "./Continent.svelte";
+	import Continents from "./Continents.svelte";
+	let continents;
+	let continent;
+  </script>
+  
+  <h1>The Seven Continents Svelte App</h1>
+  <main>
+	  <Continents {continents} />
+  </main>
 
 <style>
 	main {
@@ -18,16 +19,6 @@
 		margin: 0 auto;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	.large {
-		font-size: 3em;
-	}
 
 	@media (min-width: 640px) {
 		main {
