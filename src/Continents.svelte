@@ -5,7 +5,7 @@
     let continents;
   
   onMount(async () => {
-      await fetch(`https://dvvd-django-api:8000/sources/`)
+      await fetch(`https://dvvd-django-api.onrender.com/sources/`)
         .then(r => r.json())
         .then(data => {
           continents = data;
